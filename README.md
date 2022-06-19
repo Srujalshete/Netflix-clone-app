@@ -1,4 +1,4 @@
-# Hello I'm Srujal Shete I had created Netflix clone app using React.
+# Hello I'm Srujal Shete I created Netflix clone app using React.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
