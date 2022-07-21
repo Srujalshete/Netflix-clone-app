@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import './Banner.css';
 import axios from '../axios';
 import requests from '../request';
@@ -6,8 +6,8 @@ import movieTrailer from 'movie-trailer';
 import YouTube from 'react-youtube';
 
 function Banner() {
-    const [movie, setMovie] = useState([]);
-    const [trailerurl, setTrailerurl] = useState("");
+  const [movie, setMovie] = useState([]);
+  const [trailerurl, setTrailerurl] = useState("");
 
   useEffect(() => {
       
@@ -25,7 +25,7 @@ function Banner() {
 
   }, []) 
 
-  function truncate(str ,n) {
+   function truncate(str ,n) {
       return str?.length > n ? str.substr(0, n - 1) + "..." : str;  };
 
       const handleClick = (movie) => {
@@ -49,24 +49,29 @@ function Banner() {
               autoplay:1,
             },
           }
-    return(
-        <div>
-         <header className="banner"
+  
+    return (
+      <div>
+       <header className="banner"
        onClick={() => setTrailerurl("")}
        style={{
            backgroundSize: "cover",
-           backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}" )`,
+           backgroundImage: `url(
+               "https://image.tmdb.org/t/p/original/${movie?.backdrop_path}"
+           )`,
            backgroundPosition: "center-center",
-       }}>
+       }}
+       >
 
            <div className="banner__contents">
 
                <h1 className="banner__title">
-                   {movie?.name || movie?.title || movie?.original_name}
+                   {movie?.title || movie?.name || movie?.original_name}
                </h1>
                <div className="banner__buttons">
 
-                   <button onClick={()=> handleClick(movie)}
+                   <button
+                    onClick={()=> handleClick(movie)}
 
                      className="banner__button">
                      Play
@@ -84,12 +89,15 @@ function Banner() {
            </div>
          
          <div className="banner--fadeBottom"/>
-          </header>
-           {trailerurl && <YouTube
+         
+       </header>
+      
+       {trailerurl && <YouTube
              videoId={trailerurl}  
              opts={opts}
             />} 
-        </div>
-        )
-    }
-export default Banner;
+      </div>
+    )
+}
+
+export default Banner
