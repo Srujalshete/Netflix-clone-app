@@ -1,5 +1,5 @@
 Certainly! Here's a description for a Netflix clone website created using React.js with various functionalities and multiple sections, incorporating IMDb API for playing trailers:
-![Uploading net.png…]()
+
 
 ---
 
@@ -18,6 +18,7 @@ Welcome to the Netflix Clone, an immersive platform meticulously crafted using R
    - **Genre-based Sections:** Dive into various genres such as Romance, Action, Horror, Comedy, Documentaries, and more, providing tailored content preferences.
 
 3. **IMDb Integration for Trailers:** Experience seamless access to movie trailers directly from IMDb API integration. Get a glimpse of the movies before deciding what to watch.
+![net](https://github.com/Srujalshete/Netflix-clone-app/assets/67551839/6e6643c6-ff47-4827-a28f-38cdf228c2c1)
 
 4. **Dynamic UI Elements:** Engage with a visually appealing and user-friendly interface, ensuring effortless navigation across sections and content discovery.
 
